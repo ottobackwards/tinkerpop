@@ -106,7 +106,6 @@ class TestDriverRemoteConnection(TestCase):
         assert 3 == n["lop"]
         assert 1 == n["ripple"]
 
-
         t = g.withSideEffect('m',32).V().map(lambda: "x: x.sideEffects('m')")
         results = t.toSet()
         assert 1 == len(results)
